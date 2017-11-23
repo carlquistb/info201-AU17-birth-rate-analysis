@@ -12,9 +12,13 @@ Also in the README.md file, create a table describing the columns currently in t
 
 | local path | type | rows | columns |
 | ---------- | ---- | ---- | ------- |
-| data/birth_rate_csv_v2/API_SP.DYN.CBRT.IN_DS2_en_csv_v2.csv | csv | 269 | "Country Name", "Country Code", "Indicator Name", "Indicator Code", "1960", "1961", through "2016", "2017" |
-| data/birth_rate_csv_v2/Metadata_Country_API_SP.DYN.CBRT.IN_DS2_en_csv_v2.csv | csv | 269 | "Country Code", "Region", "IncomeGroup", "SpecialNotes", "TableName" |
-| data/birth_rate_csv_v2/Metadata_Indicator_API_SP.DYN.CBRT.IN_DS2_en_csv_v2.csv | csv | 1 | "INDICATOR_CODE", "INDICATOR_NAME", "SOURCE_NOTE", "SOURCE_ORGANIZATION" |
+| data/birth_rate.csv | csv | 265 | "Country Name", "Country Code", "Indicator Name", "Indicator Code", "1960", "1961", through "2016", "2017" |
+| data/
+GDP_in_countries.csv | csv | 265 | "Country Name", "Country Code", "Indicator Name", "Indicator Code", "1960", "1961", through "2016", "2017" |
+| data/immigration.csv | csv | 265 | "Country Name", "Country Code", "Indicator Name", "Indicator Code", "1960", "1961", through "2016", "2017" |
+| data/income_group.csv | csv | 264 | "Country Code", "Region", "IncomeGroup", "SpecialNotes", "CountryName" |
+| data/population.csv | csv | 265 | "Country Name", "Country Code", "Indicator Name", "Indicator Code", "1960", "1961", through "2016", "2017" |
+| data/population_growth.csv | csv | 265 | "Country Name", "Country Code", "Indicator Name", "Indicator Code", "1960", "1961", through "2016", "2017" |
 
 
 This week, we will not worry about any of the analysis or other work in R, just compile our resources. Go team!
