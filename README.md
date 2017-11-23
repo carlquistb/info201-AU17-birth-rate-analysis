@@ -13,8 +13,7 @@ Also in the README.md file, create a table describing the columns currently in t
 | local path | type | rows | columns |
 | ---------- | ---- | ---- | ------- |
 | data/birth_rate.csv | csv | 265 | "Country Name", "Country Code", "Indicator Name", "Indicator Code", "1960", "1961", through "2016", "2017" |
-| data/
-GDP_in_countries.csv | csv | 265 | "Country Name", "Country Code", "Indicator Name", "Indicator Code", "1960", "1961", through "2016", "2017" |
+| data/GDP_in_countries.csv | csv | 265 | "Country Name", "Country Code", "Indicator Name", "Indicator Code", "1960", "1961", through "2016", "2017" |
 | data/immigration.csv | csv | 265 | "Country Name", "Country Code", "Indicator Name", "Indicator Code", "1960", "1961", through "2016", "2017" |
 | data/income_group.csv | csv | 264 | "Country Code", "Region", "IncomeGroup", "SpecialNotes", "CountryName" |
 | data/population.csv | csv | 265 | "Country Name", "Country Code", "Indicator Name", "Indicator Code", "1960", "1961", through "2016", "2017" |
