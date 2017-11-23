@@ -1,4 +1,4 @@
-#requirements for the project proposal:
+# requirements for the project proposal:
 
 1. Create **at least 5** GitHub Issues as your first set of steps to take in the project.  You should assign these to individual group members to complete 
 
