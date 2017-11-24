@@ -52,7 +52,7 @@ All the quesitons below are answered by statistical analysis.
 - Global / region / specitic country birth rate tendency from 1960-2015
 - Deviations during the period and the reasons for the bias. (eg. huge global events) And we can conclude several factors that have strong influence on birth rate.
 - Comparison of birth rate in 4 different level of income countries (aka national living standard)
-- The relaionship between GDP growth and birth rate in scale of global / region / country.
+- The relationship between GDP growth and birth rate in scale of global / region / country.
 - Ellaboration of the **Demographic Dividend Theory**'s appliance. And how it applied to the Demographic Policies nowadays according to the data analysis results.
 
 *Extra*
