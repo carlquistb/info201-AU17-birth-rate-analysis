@@ -1,33 +1,14 @@
 # Birth Rate Analysis Project Proposal:
 
 #### Brief Introduction:
-This project is to show the birth rate and its tendency of over 200 countries over the world from 1960 to 2015. Besides, the report will go to a further exploration of the relaionship between birth analysis and economic growth in certain countries and regions, by comparing the trend of birth rate, population growth and GDP growth rate.
+This project will illustrate birth rates and their tendencies for over 200 countries from 1960 to 2015. Further, the report will go in depth over the relaionship between birth rate and economic growth in certain countries and regions, by comparing the rates of birth, population growth, and GDP growth.
 
-In this interactive report, you can search for specific birth rate, population growth rate, GDP in certain area and period of time. What's more, as an extra, we will also consider the **immigration phenomenon**, becasue it also increase a country's  population, which indicates a similiar functions as the newly born population. In here, you can find out the trend of global immigration direction and the bidirectional relationship between global immigration and economic growth hiden in the back.
+In this interactive report, you can search through area and time to obtain specific birth rates, population growths, and GDP measurements. As an extra, we will consider the **immigration phenomenon**, because it serves to increase a country's  population, which indicates a similar function as the newly born population. In this report, we will illustrate the trend of global immigration direction and the bidirectional relationship between global immigration and economic growth.
 
-#### Target users of this report:
-- Scholars who are doing research on (1) global and country birth rate changes; (2) the relationship between birth rate and economic growth; (3) the relaitonship between birth rate and national living standard in specific regions and countries. (4) global immigration trend and its impact on economic growth.
-- Readers want to know more about the verification and application of **Demographic Dividend Theory** proposed by David E. Bloom and Jeffrey G. Williamson. This report is going to discuss the scope and conditions for appliance of this theory. What's more, the report may be able to give some inspirations and suggestions on demographic policy in several certain countries, which have dominant international status.
+#### Our Data:
+Our data was collected primarily by the World Bank. Sourced (here)[]on 11/22/17, this data is divided into several csv tables, and is partially normalized. The World Bank had collected it from census reports and other statistical publications from national statistical offices
 
-
-##### 1. Create **at least 5** GitHub Issues as your first set of steps to take in the project.  You should assign these to individual group members to complete
-*Please refer to the Part 6 in proposal*
-1. Issue 1: Handbook of the project website (includes introduction, target users, contributors and so on)
-2. Issue 2: P6 1 & 2
-3. Issue 3: P6 3 graph and short text report
-4. Issue 4: P6 4 & extra 1 (we can do it in a check box) + short report
-5. Issue 5: P6 5 text report (not very long)
-6. Issue 6: P6 extra 2
-7. Issue 7: *extra* P6 extra 3
-
-##### 2. What will be the format of your final product (Shiny app, HTML page or slideshow compiled with KnitR, etc.)?
-Shiny app
-
-##### 3. How will you be reading in your data (i.e., are you using an API, or is it a static .csv/.json file)?
-static.csv (e.g. read.csv())
-
-##### 4. What types of data-wrangling (reshaping, reformatting, etc.) will you need to do to your data?
-We have a list of database as following:
+We have outlined a list of our collected datasets below:
 
 | local path | type | rows | columns |
 | ---------- | ---- | ---- | ------- |
@@ -38,11 +19,33 @@ We have a list of database as following:
 | data/population.csv | csv | 265 | "Country Name", "Country Code", "Indicator Name", "Indicator Code", "1960", "1961", through "2016", "2017" |
 | data/population_growth.csv | csv | 265 | "Country Name", "Country Code", "Indicator Name", "Indicator Code", "1960", "1961", through "2016", "2017"|
 
-We will use ```filter``` ```join``` ```mutate``` and other functions in ```dplyr```package to reshape our dataframe. For example, combine the dataframe of *income group* and *birth rate* can help figure out the link between newly birth populaiton and living standard.
+#### Target users of this report:
+- Scholars who are doing research on (1) global and country birth rate changes; (2) the relationship between birth rate and economic growth; (3) the relaitonship between birth rate and national living standard in specific regions and countries. (4) global immigration trend and its impact on economic growth.
+- Readers who want to know more about the verification and application of **Demographic Dividend Theory** proposed by David E. Bloom and Jeffrey G. Williamson. This report is going to discuss the scope and conditions for application of this theory. What's more, the report may be able to suggest future action on demographic policy in several certain countries with dominant international status.
+
+
+##### 1. Create **at least 5** GitHub Issues as your first set of steps to take in the project.  You should assign these to individual group members to complete
+*Please refer to the Part 6 in proposal*
+* Issue 1: Handbook of the project website (includes introduction, target users, contributors and so on)
+* Issue 2: P6 1 & 2
+* Issue 3: P6 3 graph and short text report
+* Issue 4: P6 4 & extra 1 (we can do it in a check box) + short report
+* Issue 5: P6 5 text report (not very long)
+* Issue 6: P6 extra 2
+* Issue 7: *extra* P6 extra 3
+
+##### 2. What will be the format of your final product (Shiny app, HTML page or slideshow compiled with KnitR, etc.)?
+Shiny app
+
+##### 3. How will you be reading in your data (i.e., are you using an API, or is it a static .csv/.json file)?
+static.csv (e.g. read.csv())
+
+##### 4. What types of data-wrangling (reshaping, reformatting, etc.) will you need to do to your data?
+
+We will use ```filter```, ```join```, ```mutate``` and other functions in the ```dplyr```package to reshape the many semi-normalized dataframes into 1. For example, combining the dataframe of *income group* and *birth rate* can help determine the link between newly birth populaiton and living standard.
 
 ##### 5. What (major/new) libraries will be using in this project (no need to list common libraries that are used in many projects such as dplyr)
-We are still doing some research.
-
+Besides Shiny integration and ggplot plotting, there will not be need for any packages beyond normal data manipulation packages commonly used in R.
 ##### 6. What questions, if any, will you be answering with statistical analysis/machine learning?
 
 All the quesitons below are answered by statistical analysis.
