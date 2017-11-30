@@ -1,10 +1,13 @@
 
 #Shiny App UI
 
+#install.packages("shinythemes")
+#install.packages("leaflet")
+
 #libraries
   library(shiny)
-  #install.packages("shinythemes")
   library(shinythemes)
+  library(leaflet)
 
 #source files for each contributor
   #source("contributorScripts/brendan.R")
@@ -26,8 +29,8 @@ shinyUI(
     ),
     
     ####map tab####
-    tabPanel("world map explorer"
-      
+    tabPanel("world map explorer",
+      leafletOutput("worldMapExplorer")
     ),
     
     ####stat comparison tab####
@@ -35,11 +38,12 @@ shinyUI(
              
     ),
     
+    ####grouped comparison tab####
     tabPanel("grouped comparison"
              
     ),
     
-    ####markdown####
+    ####markdown tabs####
     navbarMenu("About",
       tabPanel("Using this app",
         includeMarkdown("md/instructions.md")
