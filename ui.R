@@ -30,6 +30,15 @@ shinyUI(
       
     ),
     
+    ####stat comparison tab####
+    tabPanel("statistic chronological comparison"
+             
+    ),
+    
+    tabPanel("grouped comparison"
+             
+    ),
+    
     ####markdown####
     navbarMenu("About",
       tabPanel("Using this app",

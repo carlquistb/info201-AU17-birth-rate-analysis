@@ -12,6 +12,6 @@ shinyServer(function(input, output, session) {
   })
   
   output$sampleMainPanelOutput <- renderText({
-    "sample main panel output."
+    "sample main panel output. we can play around and test things on this output panel."
   })
 })
