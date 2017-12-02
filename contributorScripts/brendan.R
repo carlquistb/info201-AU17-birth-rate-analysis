@@ -79,3 +79,12 @@ makeFullDataframe <- function() {
   #return data.frame
   return(data)
 }
+
+worldMap <- function(data, current_year){
+  print(paste0("X", current_year))
+  print(toString(data$year))
+  current.data <- data %>% filter(data$year == paste0("X", current_year))
+  print(head(current.data))
+  leaflet(current.data) %>% addTiles() %>% addMarkers(~long, ~lat, ~htmlEscape(gdp))
+}
+
