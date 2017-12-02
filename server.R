@@ -6,6 +6,8 @@ library(tidyr)
 
 #source contributor scripts
 source("contributorScripts/brendan.R")
+#source("contributorScripts/sammi.R")
+#source("contributorScripts/jasmine.R")
 
 shinyServer(function(input, output, session) {
   
