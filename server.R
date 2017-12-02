@@ -1,12 +1,16 @@
 library(shiny)
 library(shinythemes)
 library(dplyr)
+library(htmltools)
+library(tidyr)
 
 #source contributor scripts
-#source("contributorScripts/___.R)
-
+source("contributorScripts/brendan.R")
 
 shinyServer(function(input, output, session) {
+  
+  ####run once per user####
+  
   
   ####sample panel code.####
   output$sampleSidebarOutput <- renderText({
@@ -20,11 +24,17 @@ shinyServer(function(input, output, session) {
   
   #### map tab code.####
   output$worldMapExplorer <- renderLeaflet({
-    df = data.frame(Lat = 1:10, Long = rnorm(10))
-    leaflet(df) %>% addCircles()
+    GDP <- read.csv("data/GDP_in_countries.csv",
+                    stringsAsFactors = FALSE)
+    country_list <- read.csv("data/Country_List.csv",
+                             stringsAsFactors = FALSE) %>% 
+      select(long = Longitude..average., 
+             lat = Latitude..average., 
+             Country.Code = Alpha.3.code)
+    GDP <- inner_join(GDP, country_list, by = "Country.Code")
+    leaflet(GDP) %>% addTiles() %>% addMarkers()
   })
-  
-  
+
   #### stat comparison tab code.####
   
   

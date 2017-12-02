@@ -30,7 +30,14 @@ shinyUI(
     
     ####map tab####
     tabPanel("world map explorer",
-      leafletOutput("worldMapExplorer")
+      sidebarLayout(
+        sidebarPanel(
+          sliderInput("map_slider_year", min = 1960, max = 2017, value = 2000, label = "year")
+        ),
+        mainPanel(
+          leafletOutput("worldMapExplorer")
+        )
+      )
     ),
     
     ####stat comparison tab####
