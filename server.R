@@ -10,7 +10,7 @@ source("contributorScripts/brendan.R")
 shinyServer(function(input, output, session) {
   
   ####run once per user####
-  
+  data <- makeFullDataframe()
   
   ####sample panel code.####
   output$sampleSidebarOutput <- renderText({
