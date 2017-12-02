@@ -1,25 +1,37 @@
 
-library(shiny)
-library(dplyr)
-library(plotly)
-library(ggplot2)
+readFile <- function(fileName){
+  birth_rate <- read.csv("data/birth_rate.csv")
+  GDP <- read.csv("data/GDP_in_countries.csv")
+  population <- read.csv("data/population.csv")
+  population_growth <- read.csv("data/population_growth.csv")
+  statistic <- list("birth rate" = "birth_rate",
+                    "GDP" = "GDP_in_countries",
+                    "population" = "population",
+                    "population growth" = "population_growth")
+  if(fileName=="birth_rate"){
+    return(birth_rate)
+  }
+  if(fileName=="GDP"){
+    return(GDP)
+  }
+  if(fileName=="population"){
+    return(population)
+  }
+  if(fileName=="population_growth"){
+    return(birth_rate)
+  }
+  if(fileName=="statistic"){
+    return(statistic)
+  }
+}
 
-birth_rate <- read.csv("../data/birth_rate.csv")
-GDP <- read.csv("../data/GDP_in_countries.csv")
-population <- read.csv("../data/population.csv")
-population_growth <- read.csv("../data/population_growth.csv")
 
-shinyServer(function(input, output) {
-  
-  
-  
-  output$comparison <- renderPlotly({
-    
-    statistic1 <- read.csv(paste("../data/",input$statistic1,".csv",sep = ""))
+stat_comparison <- function(input){   
+    statistic1 <- read.csv(paste("data/",input$statistic1,".csv",sep = ""))
     statistic1 <- statistic1 %>% filter(Country.Name == input$country)
     statistic1 <- statistic1 %>% select(starts_with("X"))
     
-    statistic2 <- read.csv(paste("../data/",input$statistic2,".csv",sep = ""))
+    statistic2 <- read.csv(paste("data/",input$statistic2,".csv",sep = ""))
     statistic2 <- statistic2 %>% filter(Country.Name == input$country)
     statistic2 <- statistic2 %>% select(starts_with("X"))
     
@@ -68,8 +80,5 @@ shinyServer(function(input, output) {
       add_trace(y=~values1,name = input$statistic1,mode = 'markers',type = 'scatter')%>%
       add_trace(y=~values2_regression,name = input$statistic2,mode = 'lines',type = "scatter") %>%
       add_trace(y=~values2,name = input$statistic2,mode = 'markers',type = "scatter") 
-    
-    })
+}   
   
-  
-})

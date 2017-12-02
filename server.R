@@ -3,10 +3,11 @@ library(shinythemes)
 library(dplyr)
 library(htmltools)
 library(tidyr)
+library(shiny)
 
 #source contributor scripts
 source("contributorScripts/brendan.R")
-#source("contributorScripts/sammi.R")
+source("contributorScripts/sammi.R")
 #source("contributorScripts/jasmine.R")
 
 shinyServer(function(input, output, session) {
@@ -30,6 +31,9 @@ shinyServer(function(input, output, session) {
   })
 
   #### stat comparison tab code.####
+  output$comparison <- renderPlotly({
+    stat_comparison(input)
+  })
   
   
   

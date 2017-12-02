@@ -11,6 +11,7 @@
 
 #source files for each contributor
   #source("contributorScripts/brendan.R")
+  source("contributorScripts/sammi.R")
 
 shinyUI(
   
@@ -41,8 +42,29 @@ shinyUI(
     ),
     
     ####stat comparison tab####
-    tabPanel("statistic chronological comparison"
-             
+    tabPanel("statistic chronological comparison",
+      sidebarLayout(
+        sidebarPanel(
+          selectInput("country", 
+                     label = "Country", 
+                     choices = readFile("birth_rate")$Country.Name,
+                     width = '100%'
+                     ),
+          radioButtons("statistic1", 
+                     label = "Statistic 1", 
+                     choices = readFile("statistic"),
+                     width = '100%'
+                     ),
+          radioButtons("statistic2", 
+                     label = "Statistic 2", 
+                     choices = readFile("statistic"),
+                     width = '100%'
+                     )
+         ),
+         mainPanel(
+           plotlyOutput("comparison")
+         )
+        )
     ),
     
     ####grouped comparison tab####
