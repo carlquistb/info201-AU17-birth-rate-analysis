@@ -8,6 +8,7 @@
   library(shiny)
   library(shinythemes)
   library(leaflet)
+  library(plotly)
 
 #source files for each contributor
   #source("contributorScripts/brendan.R")

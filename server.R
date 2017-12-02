@@ -3,7 +3,7 @@ library(shinythemes)
 library(dplyr)
 library(htmltools)
 library(tidyr)
-library(shiny)
+library(plotly)
 
 #source contributor scripts
 source("contributorScripts/brendan.R")
