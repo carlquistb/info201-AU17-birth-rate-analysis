@@ -25,11 +25,6 @@ shinyServer(function(input, output, session) {
   #### map tab code.####
   output$worldMapExplorer <- renderLeaflet({
     worldMap(data = data, current_year = input$map_slider_year)
-    print(paste0("X", current_year))
-    print(toString(data$year))
-    current.data <- data %>% filter(data$year == paste0("X", current_year))
-    print(head(current.data))
-    leaflet(current.data) %>% addTiles() %>% addMarkers(~long, ~lat, ~htmlEscape(gdp))
   })
 
   #### stat comparison tab code.####
