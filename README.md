@@ -1,15 +1,7 @@
 # info201-AU17-birth-rate-analysis
 Final project group for Informatics 201, introduction to data analysis and technical methods in Informatics.
 
-Hey! So, for next week, lets try to complete the following:
-
-1. Compile a list of the questions we are going to ask.
-Lets update the readme file on github with a table describing the data set that we need before we can answer that question, and a brief description of the visualization we will make.
-
-2. compile all the data sets (.csv) that we are going to use.
-upload the .csv files in a /data/ folder on the github repository. 
-Also in the README.md file, create a table describing the columns currently in the csv files.
-
+# our data
 | local path | type | rows | columns | source |
 | ---------- | ---- | ---- | ------- | -------|
 | data/birth_rate.csv | csv | 265 | "Country Name", "Country Code", "Indicator Name", "Indicator Code", "1960", "1961", through "2016", "2017" |
@@ -20,5 +12,6 @@ Also in the README.md file, create a table describing the columns currently in t
 | data/population_growth.csv | csv | 265 | "Country Name", "Country Code", "Indicator Name", "Indicator Code", "1960", "1961", through "2016", "2017" |
 | data/Countries_List.csv | csv | 243 | lots | https://opendata.socrata.com/dataset/Country-List-ISO-3166-Codes-Latitude-Longitude/mnkm-8ram |
 
+# our code
 
-This week, we will not worry about any of the analysis or other work in R, just compile our resources. Go team!
+- important to note, in order to locally test this code, you must run the following from a command link currently open in the master repo: ```cp -r data ~/data``` and ```cp -r contributorScripts ~/contributorScripts``` and ```cp -r md ~/md```. This is because when developing Shiny apps, you cannot use ```setwd()``` or ```getwd()```, and the working directory defaults to ```~/```, at least on my computer, probably for all macs. Windows users, I believe it will default to ```Users/yourUser```, so you should place the sourced files there.
