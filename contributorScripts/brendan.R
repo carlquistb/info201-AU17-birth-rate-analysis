@@ -68,8 +68,9 @@ makeFullDataframe <- function() {
   data <- data %>%
     select(long, 
            lat, 
-           Country.Code, 
-           Country.Name, 
+           country_code = Country.Code, 
+           country_name = Country.Name, 
+           year, 
            birth_rate, 
            pop, 
            pop_growth, 

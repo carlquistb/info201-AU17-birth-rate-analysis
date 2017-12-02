@@ -24,15 +24,12 @@ shinyServer(function(input, output, session) {
   
   #### map tab code.####
   output$worldMapExplorer <- renderLeaflet({
-    GDP <- read.csv("data/GDP_in_countries.csv",
-                    stringsAsFactors = FALSE)
-    country_list <- read.csv("data/Country_List.csv",
-                             stringsAsFactors = FALSE) %>% 
-      select(long = Longitude..average., 
-             lat = Latitude..average., 
-             Country.Code = Alpha.3.code)
-    GDP <- inner_join(GDP, country_list, by = "Country.Code")
-    leaflet(GDP) %>% addTiles() %>% addMarkers()
+    current_year <- input$map_slider_year
+    print(paste0("X", current_year))
+    print(toString(data$year))
+    current.data <- data %>% filter(data$year == paste0("X", current_year))
+    print(head(current.data))
+    leaflet(current.data) %>% addTiles() %>% addMarkers(popup = ~gdp)
   })
 
   #### stat comparison tab code.####
