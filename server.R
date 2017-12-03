@@ -32,13 +32,13 @@ shinyServer(function(input, output, session) {
   })
 
   #### stat comparison tab code.####
-    output$comparison <- renderPlotly({
-      stat_comparison(input)
-    })
+  output$comparison <- renderPlotly({
+    stat_comparison(input)
+  })
   
   
   #### grouped comparison tab code.####
-  output$barPlot <- renderPlotly({
+  output$barplot <- renderPlotly({
     print(input$get.year)
     createbar(input$data.type,input$get.year)
   })
