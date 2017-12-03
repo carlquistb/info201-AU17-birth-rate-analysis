@@ -15,6 +15,8 @@ Conributors
 - Create _brendan.R_ which includes the function will be used in server.R and ui.R
 - Create the initial server.R and ui.R
 - Built the _world map explorer_ part in the App
+
+
 ### Jasmine Huang
 - Edit part of instructions.md
 - Edit conclusion.md
@@ -22,6 +24,8 @@ Conributors
 - Edit the _grouped comparison_ part in the server.R and ui.R
 - Create _jasmine.R_ which includes the function will be used in server.R and ui.R
 - Built the _grouped comparison_ part in the App
+
+
 ### Sammi Hu
 - Find data we need
 - Create general structure of markdown files
