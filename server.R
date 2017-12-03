@@ -9,7 +9,7 @@ library(maps)
 #source contributor scripts
 source("contributorScripts/brendan.R")
 source("contributorScripts/sammi.R")
-#source("contributorScripts/jasmine.R")
+source("contributorScripts/jasmine.R")
 
 shinyServer(function(input, output, session) {
   
@@ -38,6 +38,9 @@ shinyServer(function(input, output, session) {
   
   
   #### grouped comparison tab code.####
-  
+  output$barPlot <- renderPlotly({
+    print(input$get.year)
+    createbar(input$data.type,input$get.year)
+  })
   
 })

@@ -71,7 +71,26 @@ shinyUI(
     ),
     
     ####grouped comparison tab####
-    tabPanel("grouped comparison"
+    tabPanel("grouped comparison",
+      sidebarLayout(
+      sidebarPanel(
+        
+        
+        radioButtons("data.type", label= h3("Pick the Data"),
+                     choices = list("Birth Rate"= 'final.birth', "Population"= 'final.pop', 
+                                    "Population Growth Rate"= 'final.pop.rate',"GDP Growth Rate"= 'final.GDP'),
+                     selected = 'final.birth'
+        ),
+        
+        
+        sliderInput("get.year", min = 1960, max = 2015, value = 1960, label = "year")
+        
+      ),   
+      mainPanel(
+        plotlyOutput("barplot")
+      )
+    )
+      
              
     ),
     
