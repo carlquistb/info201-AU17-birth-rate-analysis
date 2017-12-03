@@ -38,7 +38,7 @@ shinyServer(function(input, output, session) {
   
   
   #### grouped comparison tab code.####
-  output$barPlot <- renderPlotly({
+  output$barplot <- renderPlotly({
     print(input$get.year)
     createbar(input$data.type,input$get.year)
   })
