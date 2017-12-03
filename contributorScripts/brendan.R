@@ -81,10 +81,26 @@ makeFullDataframe <- function() {
 }
 
 worldMap <- function(data, current_year){
-  print(paste0("X", current_year))
-  print(toString(data$year))
+  #get current data
   current.data <- data %>% filter(data$year == paste0("X", current_year))
-  print(head(current.data))
-  leaflet(current.data) %>% addTiles() %>% addMarkers(~long, ~lat, ~htmlEscape(gdp))
+  
+  #popup content
+  content <- paste(sep = "<br/>",
+                   paste0("Country: ", current.data$country_name),
+                   paste0("population: ", current.data$pop),
+                   paste0("population growth: ", current.data$pop_growth),
+                   paste0("immigration: ", current.data$immigration),
+                   paste0("gdp: ", current.data$gdp),
+                   paste0("birth rate: ", current.data$birth_rate)
+                  )
+  
+  #get underlay data
+  my.map <- map("world", fill = TRUE, plot = FALSE)
+  
+  #print leaflet
+  leaflet(current.data) %>% 
+    addTiles() %>% 
+    #addPolygons(map = my.map, fillColor = topo.colors(10, alpha = NULL), stroke = FALSE) %>%
+    addMarkers(~long, ~lat, popup = content)
 }
 

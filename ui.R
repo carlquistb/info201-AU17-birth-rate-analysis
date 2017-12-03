@@ -3,15 +3,17 @@
 
 #install.packages("shinythemes")
 #install.packages("leaflet")
+#install.packages("maps")
 
 #libraries
   library(shiny)
   library(shinythemes)
   library(leaflet)
   library(plotly)
+  library(maps)
 
 #source files for each contributor
-  #source("contributorScripts/brendan.R")
+  source("contributorScripts/brendan.R")
   source("contributorScripts/sammi.R")
 
 shinyUI(

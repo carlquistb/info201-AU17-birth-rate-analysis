@@ -4,6 +4,7 @@ library(dplyr)
 library(htmltools)
 library(tidyr)
 library(plotly)
+library(maps)
 
 #source contributor scripts
 source("contributorScripts/brendan.R")
