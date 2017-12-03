@@ -20,7 +20,7 @@ Conributors
 - Conclude the relationship between different data
 ### Sammi Hu
 - Find data we need
-- Edit part of Markdown files
+- Create general structure of markdown files and edit part of them
 - Edit _sources.md_
 - Edit the _statistic chronological comparison_ part in the server.R and ui.R
 - Create _sammi.R_ which includes the function will be used in server.R and ui.R
