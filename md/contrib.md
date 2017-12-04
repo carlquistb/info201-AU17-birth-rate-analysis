@@ -1,5 +1,4 @@
-Conributors
----
+# Contributors
 
 
 - Brendan Carlquist
