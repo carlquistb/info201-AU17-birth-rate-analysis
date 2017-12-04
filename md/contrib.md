@@ -19,8 +19,8 @@ Conributors
 
 ### Jasmine Huang
 - Edit proposal file and help find database.
-- Edit part of instructions.md
-- Edit conclusion.md
+- Edit part of _instructions.md_
+- Edit _conclusion.md_
 - Conclude the relationship between different data
 - Edit the _grouped comparison_ part in the server.R and ui.R
 - Create _jasmine.R_ which includes the function will be used in server.R and ui.R
