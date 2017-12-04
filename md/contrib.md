@@ -24,6 +24,7 @@ Conributors
 - Conclude the relationship between different data
 - Edit the _grouped comparison_ part in the server.R and ui.R
 - Create _jasmine.R_ which includes the function will be used in server.R and ui.R
+- Create _world.R_ and _world.data.jpg_
 - Built the _grouped comparison_ part in the App
 
 

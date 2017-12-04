@@ -1,4 +1,5 @@
 library(dplyr)
+library(ggplot2)
 
 # read datas
 birth.rate <- read.csv("data/birth_rate.csv", stringsAsFactors = FALSE) %>% 
@@ -55,61 +56,37 @@ rm(GDP.all)
 rm(GDP.rate)
 rm(region)
 
-# group into region and calculate mean(average)
-group.region <- function(dataframe){
-  dataframe %>% group_by(dataframe$Region) %>%
-  summarise_all(funs(mean(., na.rm = T)))
-}
+birth.mean <- colMeans(semi.birth[,-1],na.rm=TRUE) %>% as.data.frame()
+pop.rate.mean <- colMeans(semi.pop.rate[,-1],na.rm = TRUE) %>% as.data.frame()
+GDP.mean <- colMeans(semi.GDP.rate[,-1],na.rm = TRUE) %>% as.data.frame()
 
-
-final.birth <- group.region(semi.birth)
-names(final.birth)[1] <- "name" 
 rm(semi.birth)
-
-final.pop <- group.region(semi.pop)
-names(final.pop)[1] <- "name"
+rm(semi.GDP.rate)
 rm(semi.pop)
-
-final.pop.rate <- group.region(semi.pop.rate) 
-final.pop.rate <- final.pop.rate[-8,] %>% as.data.frame()
-names(final.pop.rate)[1] <- "name"
 rm(semi.pop.rate)
 
-final.GDP <- group.region(semi.GDP.rate)
-names(final.GDP)[1] <- "name"
-rm(semi.GDP.rate)
+year <- rownames(birth.mean) %>% as.data.frame() 
+names(year) <- "year"
+
+birth.mean <- data.frame(year,birth.mean)
+names(birth.mean)[2] <- "birth"
+
+pop.rate.mean <- data.frame(year, pop.rate.mean)
+names(pop.rate.mean)[2] <- "population"
+
+GDP.mean <- data.frame(year,GDP.mean)
+names(GDP.mean)[2] <- "GDP"
+
+png(filename = "world.data.jpg")
+a <- ggplot()+
+  geom_line(data= birth.mean,aes(x=year, y=birth, group=1),colour="blue", size=1)+
+  geom_line(data= pop.rate.mean,aes(x=year, y=population, group=1),colour="red", size=1)+
+  geom_line(data= GDP.mean, aes(x= year, y= GDP, group=1),colour ="yellow", size=1)+
+  theme(axis.ticks.y=element_blank(), 
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank())+
+  ylab("value")
+dev.off()
 
 
-
-# draw the region bar plot
-createbar <- function(datatype, year){
-  print(datatype)
-  if(datatype== "final.birth"){
-    filtered <- final.birth
-  }
-  if(datatype== "final.pop"){
-    filtered <- final.pop
-  }
-  if(datatype=="final.pop.rate"){
-    filtered <-  final.pop.rate
-  }
-  if(datatype== "final.GDP"){
-    filtered <- final.GDP
-  }
-  
-  time <- toString(year)
-  filtered <- filtered %>% select(name,time)
-  names(filtered)[2] <- "year"
-  
-  
-  bar.region <- plot_ly(data = filtered, x = ~filtered$name,
-                        y= ~filtered$year, type = 'bar',
-                        hoverinfo = 'text',
-                        # sets hover text
-                        text = ~paste("Region:", filtered$name, "<br>","Value:",filtered$year))%>%
-    
-    layout(xaxis= list(title = "Regions"),
-           yaxis= list(title = "Value"))
-  return(bar.region)
-}
-
+ 
