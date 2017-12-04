@@ -16,16 +16,6 @@ shinyServer(function(input, output, session) {
   ####run once per user####
   data <- makeFullDataframe()
   
-  ####sample panel code.####
-  output$sampleSidebarOutput <- renderText({
-    "sample sidebar output."
-  })
-  
-  output$sampleMainPanelOutput <- renderText({
-    "sample main panel output. we can play around and test things on this output panel."
-  })
-  
-  
   #### map tab code.####
   output$worldMapExplorer <- renderLeaflet({
     worldMap(data = data, current_year = input$map_slider_year)
