@@ -14,7 +14,7 @@
 
 shinyUI(
   
-  navbarPage("Birth Rate Analysis", theme = shinytheme("cerulean"),
+  navbarPage("Birth Rate Analysis", theme = shinytheme("sandstone"),
     
     ####map tab####
     tabPanel("World Map Explorer",

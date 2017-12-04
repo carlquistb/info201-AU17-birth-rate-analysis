@@ -127,7 +127,8 @@ stat_comparison <- function(input){
         add_trace(y=~values1_regression,name = input$statistic1 ,mode = 'lines',type = 'scatter')%>%
         add_trace(y=~values1,name = input$statistic1,mode = 'markers',type = 'scatter')%>%
         add_trace(y=~values2_regression,name = input$statistic2 ,mode = 'lines',type = 'scatter')%>%
-        add_trace(y=~values2,name = input$statistic2,mode = 'markers',type = 'scatter')  
+        add_trace(y=~values2,name = input$statistic2,mode = 'markers',type = 'scatter') %>%
+        layout(xaxis = list(title="years"), yaxis = list(title="statistic"))
       
     }
     
