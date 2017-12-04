@@ -8,7 +8,7 @@ Conclusion
 
 **Yello line**: GDP growth rate (world average)
 
-**Red line** : Population growth rate (worl averge)
+**Red line** : Population growth rate (world averge)
 
 According to the world data tendency,
 - Birth rate is continously decreasing.
