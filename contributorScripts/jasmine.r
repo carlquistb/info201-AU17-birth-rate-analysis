@@ -1,5 +1,8 @@
 library(dplyr)
 
+getRegionalData <- function() {
+  
+}
 # read datas
 birth.rate <- read.csv("data/birth_rate.csv", stringsAsFactors = FALSE) %>% 
   select(-Indicator.Name,-Indicator.Code,-X2016,-X2017)
