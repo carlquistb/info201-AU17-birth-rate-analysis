@@ -24,9 +24,9 @@ See the chronological camparison between two statistic by drawing regression lin
 
 - If the value is far away from the regression linear (the difference between the maximum value and the minimum value is large), then it will be an outlier. The outliers are shown as points.
 
-- If some outliers seems lay along with the regression linear, you can zoom in and find out it is not actually in the line but just because that the value of that statistic is relatively too small.
+- If outliers seems close to the regression linear, you can zoom in to find out it is not actually in the line; This occurs because the value of that statistic is relatively too small, compared to the other statistic on the plot.
 
-- If you click the button and choose a statistic with no reaction in the chart, it means that this data is missing. If both statistic 1 and 2 are missing, there will be a blank plot.
+- If you click the button and choose a statistic with no reaction in the chart, it means that this data is missing. If both statistic 1 and 2 are missing, the plot will appear blank.
 
 ### Grouped Comparison
 
