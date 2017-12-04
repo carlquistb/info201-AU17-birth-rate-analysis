@@ -64,20 +64,20 @@ group.region <- function(dataframe){
 
 final.birth <- group.region(semi.birth)
 names(final.birth)[1] <- "name" 
-rm(semi.birth)
+#rm(semi.birth)
 
 final.pop <- group.region(semi.pop)
 names(final.pop)[1] <- "name"
-rm(semi.pop)
+#rm(semi.pop)
 
 final.pop.rate <- group.region(semi.pop.rate) 
 final.pop.rate <- final.pop.rate[-8,] %>% as.data.frame()
 names(final.pop.rate)[1] <- "name"
-rm(semi.pop.rate)
+#rm(semi.pop.rate)
 
 final.GDP <- group.region(semi.GDP.rate)
 names(final.GDP)[1] <- "name"
-rm(semi.GDP.rate)
+#rm(semi.GDP.rate)
 
 
 
@@ -112,5 +112,4 @@ createbar <- function(datatype, year){
            yaxis= list(title = "Value"))
   return(bar.region)
 }
-
 
