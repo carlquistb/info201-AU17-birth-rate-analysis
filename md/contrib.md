@@ -16,6 +16,7 @@ Conributors
 - Create the initial server.R and ui.R
 - Built the _world map explorer_ part in the App
 ### Jasmine Huang
+- Edit proposal file and help find database.
 - Edit part of instructions.md
 - Edit conclusion.md
 - Conclude the relationship between different data
