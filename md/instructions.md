@@ -28,7 +28,7 @@ See the chronological camparison between two statistic by drawing regression lin
 
 - If you click the button and choose a statistic with no reaction in the chart, it means that this data is missing. If both statistic 1 and 2 are missing, the plot will appear blank.
 
-### Grouped Comparison
+### Regional Comparison
 
 Make comparison between seven regions in four database. All the countries are grouped into seven regions: East Asia & Pacific, Europe & Central Asia, Latin America & Caribbean, Middle East & North Africa, North America, South Asia, Sub-Saharan Africa.
 
