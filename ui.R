@@ -12,7 +12,7 @@
   library(plotly)
   library(maps)
 
-  source("contributorScripts/sammi.R")
+  source("contributor_scripts/sammi.R")
   
 shinyUI(
   

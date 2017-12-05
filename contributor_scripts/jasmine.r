@@ -10,7 +10,7 @@ pop <- read.csv("data/population.csv", stringsAsFactors = FALSE)%>%
   select(-Indicator.Name,-Indicator.Code,-X2016,-X2017)
 pop.rate <- read.csv("data/population_growth.csv", stringsAsFactors = FALSE)%>% 
   select(-Indicator.Name,-Indicator.Code,-X2016,-X2017)
-GDP.rate <- read.csv("data/GDP_in_countries.csv", stringsAsFactors = FALSE) %>% 
+GDP.rate <- read.csv("data/gdp_in_countries.csv", stringsAsFactors = FALSE) %>% 
   select(-Indicator.Name,-Indicator.Code,-X2016,-X2017)
 region <- read.csv("data/income_group.csv", stringsAsFactors = FALSE) %>% 
   select(Country.Code, Region)

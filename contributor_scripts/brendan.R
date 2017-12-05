@@ -1,10 +1,10 @@
 getFullDataframe <- function() {
   #load data
-  country_list <- read.csv("data/Country_List.csv", stringsAsFactors = FALSE)
+  country_list <- read.csv("data/country_list.csv", stringsAsFactors = FALSE)
   birth_rate <- read.csv("data/birth_rate.csv", stringsAsFactors = FALSE)
   pop <- read.csv("data/population.csv", stringsAsFactors = FALSE)
   pop_growth <- read.csv("data/population_growth.csv", stringsAsFactors = FALSE)
-  gdp <- read.csv("data/GDP_in_countries.csv", stringsAsFactors = FALSE)
+  gdp <- read.csv("data/gdp_in_countries.csv", stringsAsFactors = FALSE)
   immigration <- read.csv("data/immigration.csv", stringsAsFactors = FALSE)
   
   #clean data

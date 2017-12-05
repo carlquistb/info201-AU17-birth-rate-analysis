@@ -7,9 +7,9 @@ library(plotly)
 library(maps)
 
 #source contributor scripts
-source("contributorScripts/brendan.R")
-source("contributorScripts/sammi.R")
-source("contributorScripts/jasmine.R")
+source("contributor_scripts/brendan.R")
+source("contributor_scripts/sammi.R")
+source("contributor_scripts/jasmine.R")
 
 shinyServer(function(input, output, session) {
   

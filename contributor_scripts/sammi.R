@@ -1,7 +1,7 @@
 
 readFile <- function(fileName){
   birth_rate <- read.csv("data/birth_rate.csv")
-  GDP <- read.csv("data/GDP_in_countries.csv")
+  GDP <- read.csv("data/gdp_in_countries.csv")
   population <- read.csv("data/population.csv")
   population_growth <- read.csv("data/population_growth.csv")
   statistic <- list("birth rate" = "birth_rate",
