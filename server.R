@@ -9,7 +9,7 @@ library(maps)
 #source contributor scripts
 source("contributor_scripts/brendan.R")
 source("contributor_scripts/sammi.R")
-source("contributor_scripts/jasmine.R")
+source("contributor_scripts/jasmine.r")
 
 shinyServer(function(input, output, session) {
   
