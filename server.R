@@ -14,7 +14,7 @@ source("contributorScripts/jasmine.R")
 shinyServer(function(input, output, session) {
   
   ####run once per user####
-  data <- makeFullDataframe()
+  data <- getFullDataframe()
   
   #### map tab code.####
   output$worldMapExplorer <- renderLeaflet({

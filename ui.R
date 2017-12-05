@@ -12,6 +12,8 @@
   library(plotly)
   library(maps)
 
+  source("contributorScripts/sammi.R")
+  
 shinyUI(
   
   navbarPage("Birth Rate Analysis", theme = shinytheme("sandstone"),
