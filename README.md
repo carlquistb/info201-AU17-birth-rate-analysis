@@ -15,3 +15,6 @@ Final project group for Informatics 201, introduction to data analysis and techn
 # our code
 
 - important to note, in order to locally test this code, you must run the following from a command link currently open in the master repo: ```cp -r data ~/data``` and ```cp -r contributorScripts ~/contributorScripts``` and ```cp -r md ~/md```. This is because when developing Shiny apps, you cannot use ```setwd()``` or ```getwd()```, and the working directory defaults to ```~/```, at least on my computer, probably for all macs. Windows users, I believe it will default to ```Users/yourUser```, so you should place the sourced files there.
+
+# remote host
+[Shiny App Server](https://carlquistb.shinyapps.io/info201-AU17-birth-rate-analysis/)
