@@ -1,0 +1,12 @@
+name: birth-rate-analysis
+title: birth-rate-analysis
+username:
+account: sammi
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 245261
+bundleId: 1119483
+url: https://sammi.shinyapps.io/birth-rate-analysis/
+when: 1512590458.66866
+asMultiple: FALSE
+asStatic: FALSE

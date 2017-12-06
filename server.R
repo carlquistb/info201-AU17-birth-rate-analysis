@@ -6,6 +6,8 @@ library(tidyr)
 library(plotly)
 library(maps)
 
+options(shiny.sanitize.errors = FALSE)
+
 #source contributor scripts
 source("contributor_scripts/brendan.R")
 source("contributor_scripts/sammi.R")
@@ -14,7 +16,7 @@ source("contributor_scripts/jasmine.r")
 shinyServer(function(input, output, session) {
   
   ####run once per user####
-  data <- getFullDataframe()
+  data <- getfulldataframe()
   
   #### map tab code.####
   output$worldMapExplorer <- renderLeaflet({
@@ -29,6 +31,7 @@ shinyServer(function(input, output, session) {
   
   #### grouped comparison tab code.####
   output$barplot <- renderPlotly({
+    
     createbar(input$data.type,input$get.year)
   })
   

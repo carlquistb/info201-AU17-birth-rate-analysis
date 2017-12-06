@@ -10,7 +10,7 @@ pop <- read.csv("data/population.csv", stringsAsFactors = FALSE)%>%
   select(-Indicator.Name,-Indicator.Code,-X2016,-X2017)
 pop.rate <- read.csv("data/population_growth.csv", stringsAsFactors = FALSE)%>% 
   select(-Indicator.Name,-Indicator.Code,-X2016,-X2017)
-GDP.rate <- read.csv("data/gdp_in_countries.csv", stringsAsFactors = FALSE) %>% 
+gdp.rate <- read.csv("data/gdp_in_countries.csv", stringsAsFactors = FALSE) %>% 
   select(-Indicator.Name,-Indicator.Code,-X2016,-X2017)
 region <- read.csv("data/income_group.csv", stringsAsFactors = FALSE) %>% 
   select(Country.Code, Region)
@@ -21,7 +21,7 @@ region <- read.csv("data/income_group.csv", stringsAsFactors = FALSE) %>%
 names(birth.rate) <- gsub("X","",names(birth.rate),fixed = TRUE)
 names(pop) <- gsub("X","",names(pop),fixed = TRUE)
 names(pop.rate) <- gsub("X","",names(pop.rate),fixed = TRUE)
-names(GDP.rate) <- gsub("X","",names(GDP.rate),fixed = TRUE)
+names(gdp.rate) <- gsub("X","",names(gdp.rate),fixed = TRUE)
 
 
 # semi.birth.rate
@@ -50,12 +50,12 @@ rm(pop.rate)
 
 
 #semi.GDP
-GDP.all <- full_join(region, GDP.rate, by= "Country.Code")
+GDP.all <- full_join(region, gdp.rate, by= "Country.Code")
 GDP.all = GDP.all[-264,]
-semi.GDP.rate <- GDP.all[!(GDP.all$Region==""),] %>%
+semi.gdp.rate <- GDP.all[!(GDP.all$Region==""),] %>%
   select(-Country.Name, -Country.Code)
 rm(GDP.all)
-rm(GDP.rate)
+rm(gdp.rate)
 rm(region)
 
 # group into region and calculate mean(average)
@@ -78,9 +78,9 @@ final.pop.rate <- final.pop.rate[-8,] %>% as.data.frame()
 names(final.pop.rate)[1] <- "name"
 rm(semi.pop.rate)
 
-final.GDP <- group.region(semi.GDP.rate)
+final.GDP <- group.region(semi.gdp.rate)
 names(final.GDP)[1] <- "name"
-rm(semi.GDP.rate)
+rm(semi.gdp.rate)
 
 
 

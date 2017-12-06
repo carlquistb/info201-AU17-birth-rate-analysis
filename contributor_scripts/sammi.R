@@ -1,18 +1,18 @@
 
 readFile <- function(fileName){
   birth_rate <- read.csv("data/birth_rate.csv")
-  GDP <- read.csv("data/gdp_in_countries.csv")
+  gdp <- read.csv("data/gdp_in_countries.csv")
   population <- read.csv("data/population.csv")
   population_growth <- read.csv("data/population_growth.csv")
   statistic <- list("birth rate" = "birth_rate",
-                    "GDP" = "GDP_in_countries",
+                    "GDP" = "gdp_in_countries",
                     "population" = "population",
                     "population growth" = "population_growth")
   if(fileName=="birth_rate"){
     return(birth_rate)
   }
   if(fileName=="GDP"){
-    return(GDP)
+    return(gdp)
   }
   if(fileName=="population"){
     return(population)
@@ -136,6 +136,7 @@ stat_comparison <- function(input){
     
       
 }
+options(shiny.sanitize.errors = FALSE)
 
   
 

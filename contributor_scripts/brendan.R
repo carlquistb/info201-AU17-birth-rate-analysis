@@ -1,4 +1,4 @@
-getFullDataframe <- function() {
+getfulldataframe <- function() {
   #load data
   country_list <- read.csv("data/country_list.csv", stringsAsFactors = FALSE)
   birth_rate <- read.csv("data/birth_rate.csv", stringsAsFactors = FALSE)
